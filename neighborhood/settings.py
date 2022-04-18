@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+import cloudinary
+import cloudinary.uploader
+import cloudinary.api
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -27,7 +30,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+cloudinary.config( 
+  cloud_name = "insta-proj-django", 
+  api_key = "932143523858223", 
+  api_secret = "2KdKkJ2VspOn62tQblaiBE0ZEl8" 
+)
 # Application definition
 
 INSTALLED_APPS = [
@@ -39,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'hood',
     'bootstrap4',
+    'cloudinary',
 ]
 
 MIDDLEWARE = [
