@@ -14,7 +14,7 @@ class Location(models.Model):
 
     def __str__(self):
         return self.name 
-        
+
 class Neighborhood(models.Model):
     name = models.CharField(max_length=50)
     image = CloudinaryField('image',null=True)
@@ -87,3 +87,25 @@ class Category(models.Model):
 
     def __str__(self):
         return self.name      
+
+class Post(models.Model):
+    title = models.CharField(max_length=120, null=True)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
+    content = models.TextField()
+    date = models.DateTimeField(auto_now_add=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    location = models.ForeignKey(Location, on_delete=models.CASCADE,null=True)
+    neighborhood = models.ForeignKey(Neighborhood, on_delete=models.CASCADE, related_name='hood_post',null=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    def create_post(self):
+        self.save()
+
+    def delete_post(self):
+        self.delete()
+
+    def update_post(self):
+        self.update()
+
+    def __str__(self):
+        return self.title
