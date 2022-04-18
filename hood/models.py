@@ -109,3 +109,31 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Business(models.Model):
+    name = models.CharField(max_length=50)
+    image=CloudinaryField('image',null=True)
+    email = models.EmailField(max_length=50)
+    description = models.TextField(blank=True, null=True)
+    neighborhood = models.ForeignKey(Neighborhood, on_delete=models.CASCADE,null=True)
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    # create business
+    def create_business(self):
+        self.save()
+
+    def delete_business(self):
+        self.delete()
+
+    def update_business(self):
+        self.update()
+
+    @classmethod
+    def search_by_name(cls, search_term):
+        business = cls.objects.filter(name__icontains=search_term)
+        return business
+
+    def __str__(self):
+        return self.name
