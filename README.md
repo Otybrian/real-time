@@ -24,6 +24,9 @@ join a hood, one can see businesses and posts in only that wood they belong to.
 ###### Home page
 At the homepage, user is able to visit login and signup pages. If an authenticated user, they are able to visit the existing hoods
   
+###### Profile
+A user is able to view and update their profiles once signed in
+
 
 ###### Neighborhoods
 Here the user is able to join a hood or create a new one. Once joine, a user is able to view details of the hood including businesses and posts by other people.
