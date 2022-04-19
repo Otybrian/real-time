@@ -57,3 +57,22 @@ python manage.py makemigrations hood
  python manage.py test 
 ```
 Open the application on your browser `127.0.0.1:8000`.  
+
+
+
+## Technology used  
+  
+* [Python3.6](https://www.python.org/)  
+* [Django 3.2.1](https://docs.djangoproject.com/en/2.2/)  
+* [Heroku](https://heroku.com)  
+  
+  
+## Known Bugs  
+* There are no known bugs currently but pull requests are allowed incase you spot a bug  
+  
+## Contact Information   
+If you have any question or contributions, please email me at [mikeycharlesm7@gmail.com]  
+  
+## License 
+
+*MIT license
