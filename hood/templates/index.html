@@ -1,11 +1,20 @@
-{% extends 'base.html' %}
-{% load bootstrap4 %}
+{% extends "base.html" %}
 
+{% load static %}
+<style>
+  .bg {
+    background-image: url('{% static "images/hood6.jpg"%}');
+    background-size: 1300px 900px;
+    background-repeat: no-repeat;
+    background-position: middle;
+    background-attachment: fixed;
+  }
+</style>
 {% block content %}
-<body>
-<h2>{{welcome}}</h2>
-<div class='container'>
+<div class=bg>
+  <div class="container-fluid">
+    <h1>Hoods</h1>
 
+  </div>
 </div>
-</body>
 {% endblock %}

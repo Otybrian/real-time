@@ -16,18 +16,10 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
   {% endblock %}
-  <style>
-    #bg{
-      background-image: url('{% static "images/hood6.jpg"%}');
-      background-size: 1300px 900px;
-      background-repeat: no-repeat;
-      background-position: middle;
-      background-attachment: fixed;
-    }
-  </style>
+  
 
 </head>
-<body id='bg'>
+<body>
     {% include "navbar.html" %}
     {% block content %}
      {%endblock%}
