@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <nav class="navbar bg-info">
+  <nav class="navbar bg-dark">
     <div class="container-fluid">
       <div class="navbar-header">
         <a class="navbar-brand" href="{%url 'neighborhood'%}">Neighborhood</a>
+        <a class="navbar-brand" href="{%url 'index'%}">Home</a>
       </div>
-      <ul class="nav navbar-nav" style="display: flex;">
-        <li class="active"><a href="{%url 'index'%}">Home</a></li>
+      <ul class="nav navbar-nav" style="display:flex;">
         <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Account<span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="{%url 'profile'%}"><span class="glyphicon glyphicon-user"></span>Profile</a></li>
@@ -21,9 +21,9 @@
         </li>
 
       </ul>
-      <form class="navbar-form navbar-left" role="search" action="{% url 'search_results'%}">
+      <form class="navbar-form navbar-left" role="search" action="{% url 'search_results'%}" style="display:flex;">
           <input type="text" class="form-control" placeholder="Search Business" name="search" style="height: 30px; width: 200px;" >
-          <button class="btn btn-success" type="submit">Submit</button>
+          <button class="btn btn-success" type="submit" style="height: 30px; margin-left: 10px;">Search</button>
       </form>
       <ul class="nav navbar-nav navbar-right">
         <li><a href="/admin">Admin Dashboard</a></li>

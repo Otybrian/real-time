@@ -16,11 +16,9 @@
 </style>
 <section >
     <div class="container mt-5">
-
+        <h2 class="text-center mb-5 headings">Neighborhoods</h2>
+        <h3 class="text-center"><a href="{% url 'new_neighbor' %}" class="btn join black font-weight-bol btn-outline-success btn-sm"><i class="fas fa-plus"></i> NEW HOOD</a></h3>
         <div class="row mt-4">
-
-            <h2 class="text-center mb-5 headings">Neighborhoods</h2>
-            <h3 class="text-center"><a href="{% url 'new_neighbor' %}" class="btn join black font-weight-bol btn-outline-success btn-sm"><i class="fas fa-plus"></i> NEW HOOD</a></h3>
 
             {% for neighbor in neighborhood %}
             <div class="col-md-6 col-lg-3">

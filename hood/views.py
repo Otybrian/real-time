@@ -8,7 +8,7 @@ from .forms import BusinessForm, ProfileForm, NeighborhoodForm,PostForm
 
 
 def index(request):
-    posts = Post.objects.all().order_by("-id")
+    posts = Neighborhood.objects.all().order_by("-id")
     return render(request, 'index.html', {'posts': posts})
 
 
