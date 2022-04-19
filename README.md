@@ -22,9 +22,9 @@ join a hood, one can see businesses and posts in only that wood they belong to.
 
 ## Screenshots 
 ###### Home page
-At the homepage, user is able to visit login and signup pages. If an authenticated use
+At the homepage, user is able to visit login and signup pages. If an authenticated user, they are able to visit the existing hoods
 ![Screenshot from 2022-04-19 19-43-49](https://user-images.githubusercontent.com/93243367/164054117-d7900028-34e0-4e39-9b33-79d1a3cf785b.png)
-r, they are able to visit the existing hoods
+
 
 ![Screenshot from 2022-04-19 17-41-09](https://user-images.githubusercontent.com/93243367/164049367-d46c8d18-0cae-47ed-8deb-6cb079ecc257.png)
 
