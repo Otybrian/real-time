@@ -19,7 +19,19 @@ join a hood, one can see businesses and posts in only that wood they belong to.
 * Create Posts that will be visible to everyone in my neighborhood.
 * Change My neighborhood when I decide to move out.
 * Only view details of a single neighborhood.
+
+## Screenshots 
+###### Home page
+At the homepage, user is able to visit login and signup pages. If an authenticated user, they are able to visit the existing hoods
   
+
+###### Neighborhoods
+Here the user is able to join a hood or create a new one. Once joine, a user is able to view details of the hood including businesses and posts by other people.
+
+The user is also able to add new businesses and new posts which will only be seen by people from the same neighborhood.
+
+###### Uploading
+Users are able to make uploads in the pages screenshot below.
 ## Setup and Installation  
 To get the project .......  
   
