@@ -27,3 +27,21 @@ class ProfileTestClass(TestCase):
         self.profile.delete_profile()
         profiles = Profile.objects.all()
         self.assertTrue(len(profiles) == 0)
+
+class LocationTestClass(TestCase):
+    def setUp(self):
+        self.location = Location(name='Test Location')
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.location, Location))
+
+    def test_save_method(self):
+        self.location.save_location()
+        locations = Location.objects.all()
+        self.assertTrue(len(locations) > 0)
+
+    def test_delete_method(self):
+        self.location.save_location()
+        self.location.delete()
+        locations = Location.objects.all()
+        self.assertTrue(len(locations) == 0)
