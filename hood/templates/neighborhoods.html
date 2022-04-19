@@ -19,13 +19,22 @@
 </style>
 <section >
     <div class="container mt-5">
-        <h2 class="text-center mb-5 headings">Neighborhoods</h2>
-        <h3 class="text-center"><a href="{% url 'new_neighbor' %}" class="btn join black font-weight-bol btn-outline-success btn-sm"><i class="fas fa-plus"></i> NEW HOOD</a></h3>
+        <h2 class="text-center mb-5 headings" style="margin-top: 10px;">Neighborhoods</h2>
+        <h3 class="text-center" style="margin-top: 10px;"><a href="{% url 'new_neighbor' %}" class="btn join black font-weight-bol btn-outline-success btn-sm"><i class="fas fa-plus"></i> NEW HOOD</a></h3>
         <div class="row mt-4">
 
             {% for neighbor in neighborhood %}
             <div class="col-md-6 col-lg-3">
                 <div class="card mb-4 post-card">
+                    {% if request.user.profile.neighborhood == neighbor %}
+                    <a href="{% url 'leave' neighbor.id %}" class="btn btn-danger btn-sm">Change Neighborhood</a>
+                    
+                    <a href="{%url 'single_hood' neighbor.name %}" class="btn btn-outline-success btn-sm">Find out more about {{neighbor.name}}
+                  </a>
+                    {% elif not request.user.profile.neighborhood %}
+                    <a href="{% url 'join' neighbor.id %}" class="btn btn-success btn-sm">Join Hood</a>
+                    {% endif %}
+                    </div>
                     <img src="{{ neighbor.image.url }}" class="card-img-top" alt="Personal">
                     
                     <div class="card-body">
@@ -41,15 +50,7 @@
                             </div>
                     </div>
                 </div>
-                {% if request.user.profile.neighborhood == neighbor %}
-            <a href="{% url 'leave' neighbor.id %}" class="btn btn-danger btn-sm">Change Neighborhood</a>
-            
-            <a href="{%url 'single_hood' neighbor.name %}" class="btn btn-outline-success btn-sm">Find out more about {{neighbor.name}}
-          </a>
-            {% elif not request.user.profile.neighborhood %}
-            <a href="{% url 'join' neighbor.id %}" class="btn btn-success btn-sm">Join Hood</a>
-            {% endif %}
-            </div>
+               
             {% endfor %}
 
         </div>
