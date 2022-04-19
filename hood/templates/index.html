@@ -1,3 +1,4 @@
+{% extends 'base.html' %}
 {% load bootstrap4 %}
 {% load static %}
 <!DOCTYPE html>
@@ -18,7 +19,9 @@
     body{
     background-color: thistle;
   }
-
+.container{
+  padding-bottom: 30px;
+}
   .container h1 {
     text-align: center;
     color: rgb(18, 30, 65);
@@ -52,9 +55,10 @@
     text-align: center;
     color: red;
   }
+
 </style>
 {% endblock %}
-
+{% block content %}
 <body id="bg">
   <div class="container">
     <h1>Welcome to the Hood</h1>
@@ -68,7 +72,7 @@
         <a href="{%url 'neighborhood'%}"><button type="button" class="btn btn-danger" style="margin-top: 30px;">Get Started</button></a>
       </div>
       <div class="col-md-6" style="margin-top: 50px;">
-        <img src='{% static "images/hood.jpg" %}' height="300px" width="400px">
+        <img src='{% static "images/back2.jpg" %}' height="350px" width="500px">
       </div>
     </div>
     <div class="row" style="margin-top: 50px;">
@@ -76,25 +80,25 @@
         <div class="card">
           <h4>Have you relocated?</h4>
           <p id="cool">It is inevitable that you will move to your house at least once in a lifetime. It seems to be a big undertaking for your entire family. This anxiety will no longer exist when you have the Relocation Assistance Program by your side. </p>
-          <a href="{%url 'neighborhood'%}"><button type="button" class="btn btn-danger" style="margin-top: 30px;">Change Your Hood</button></a>
+          <a href="{%url 'neighborhood'%}" style="padding-bottom: 10px; padding-left: 20px;"><button type="button" class="btn btn-danger" style="margin-top: 30px;">Change Your Hood</button></a>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card">
           <h4>Are you an admin?</h4>
           <p id="cool">It is inevitable that you will move to your house at least once in a lifetime. It seems to be a big undertaking for your entire family. This anxiety will no longer exist when you have the Relocation Assistance Program by your side. </p>
-          <a href="/admin"><button type="button" class="btn btn-danger" style="margin-top: 30px;">Administrator</button></a>
+          <a href="/admin" style="padding-bottom: 10px; padding-left: 20px;"><button type="button" class="btn btn-danger" style="margin-top: 30px;">Administrator</button></a>
         </div>
       </div>
       <div class="col-md-4">
         <div class="card">
           <h4>Go to profile</h4>
           <p id="cool">It is inevitable that you will move to your house at least once in a lifetime. It seems to be a big undertaking for your entire family. This anxiety will no longer exist when you have the Relocation Assistance Program by your side. </p>
-          <a href="{%url 'profile'%}"><button type="button" class="btn btn-danger" style="margin-top: 30px;">Visit Your Profile</button></a>
+          <a href="{%url 'profile'%}" style="padding-bottom: 10px; padding-left: 20px;"><button type="button" class="btn btn-danger" style="margin-top: 30px; ">Visit Your Profile</button></a>
         </div>
       </div>
     </div>
   </div>
 </body>
-
+{% endblock %}
 </html>
