@@ -1,7 +1,18 @@
 {%extends "registration/base.html"%}
 {% load bootstrap4 %}
+{% load static %}
 {% block content %}
-<div class="container">
+<style>
+   #bg{
+    background-image: url('{% static "images/back2.jpg"%}');
+    background-size: 1800px 1900px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-attachment: fixed;
+  }
+</style>
+<body id="bg">
+<div class="container-fluid">
   <div class="row">
     <!-- Empty div -->
     <div class="col-md-4"></div>
@@ -12,8 +23,8 @@
       <div class="panel panel-default">
 
         <div class="panel-heading">
-          <h2 class="text-center" style="font-style: italic;">Sign In to the Hood</h2>
-          <h3 class="text-center">Sign In</h3>
+          <h2 class="text-center" style="color: whitesmoke;">Sign In to the Hood</h2>
+          <h3 class="text-center" style="color: whitesmoke;">Sign In</h3>
         </div>
         <div class="panel-body">
 
@@ -28,7 +39,7 @@
             <input type="hidden" name="next" value="{{next}}">
 
           </form> 
-          <p class="mt-2">Don't Have an Account, <a href="/accounts/register/">Register</a></p>
+          <p class="mt-2" style="color: whitesmoke;">Don't Have an Account, <a href="/accounts/register/"><input type="submit" class="btn btn-primary btn-sm" value="Register"></a></p>
      
 
         </div>
@@ -40,5 +51,5 @@
     <div class="col-md-4"></div>
   </div>
 </div>
-
+</body>
 {% endblock %}
