@@ -8,7 +8,7 @@ Tis is a neighborhood app where a user must signup first, be able to join a hood
 join a hood, one can see businesses and posts in only that wood they belong to.  
 
 ##  Live Link  
- Click [View Site] () to visit the site live
+ Click [View Site] (https://real-hood.herokuapp.com/) to visit the site live
 
  ## User Story  
   
@@ -24,17 +24,25 @@ join a hood, one can see businesses and posts in only that wood they belong to.
 ###### Home page
 At the homepage, user is able to visit login and signup pages. If an authenticated user, they are able to visit the existing hoods
 ![Screenshot from 2022-04-19 19-43-49](https://user-images.githubusercontent.com/93243367/164054117-d7900028-34e0-4e39-9b33-79d1a3cf785b.png)
-
-
 ![Screenshot from 2022-04-19 17-41-09](https://user-images.githubusercontent.com/93243367/164049367-d46c8d18-0cae-47ed-8deb-6cb079ecc257.png)
 
 ###### Profile
-A user is able to view and update their profiles once signed in
+A user is able to view ![Screenshot from 2022-04-19 19-51-44](https://user-images.githubusercontent.com/93243367/164055515-cb93b885-4e7e-4f56-9343-ae089bcc1ac5.png)
+and update their profiles once signed in
 
 
 ###### Neighborhoods
 Here the user is able to join a hood or create a new one. Once joine, a user is able to view details of the hood including businesses and posts by other people.
 ![Screenshot from 2022-04-19 17-37-56](https://user-images.githubusercontent.com/93243367/164049435-91a16549-9886-405a-8a21-d97e168297ab.png)
+
+
+##### Businesses and Posts within a user's neighborhood
+![Screenshot from 2022-04-19 19-52-27](https://user-images.githubusercontent.com/93243367/164055463-7343b318-3563-49b4-9d6d-a0d16027dc02.png)
+![Screenshot from 2022-04-19 17-47-27](https://user-images.githubusercontent.com/93243367/164055161-52d2a88e-d9da-4fc8-8e79-b16bc2086ed0.png)
+![Screenshot from 2022-04-19 17-48-50](https://user-images.githubusercontent.com/93243367/164055220-fc2c6ef3-d7bc-4bf3-ada6-d42fc4d7158a.png)
+
+
+
 
 
 
